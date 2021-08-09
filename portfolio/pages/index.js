@@ -11,11 +11,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<       link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap"
+          rel="stylesheet"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="manifest" href="/manifest.json" />
       </Head>
 
       <main className={styles.main}>
