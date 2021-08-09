@@ -1,0 +1,49 @@
+@import 'abstracts/variables';
+
+.header span {
+  display: block;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.header {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-white;
+
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-home-light, 0.8),
+      rgba($color-home-dark, 0.8)
+    ),
+    url(../../images/codes.png);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 0 85%, 100% 100%, 100% 0);
+  -webkit-clip-path: polygon(0 0, 0 85%, 100% 100%, 100% 0);
+
+  &__text {
+    letter-spacing: 0.2rem;
+  }
+
+  &__about {
+    backface-visibility: hidden;
+    &__name {
+      display: inline-block !important;
+      color: $color-first-dark;
+    }
+    &__intro {
+      font-size: 5rem;
+    }
+    &__stack {
+    }
+    &--morestack {
+    }
+    &__others {
+    }
+    &__avaliability {
+    }
+  }
+}
