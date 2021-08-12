@@ -2,7 +2,7 @@ import styles from '../styles/sass/Header.module.scss';
 
 const Header = () => {
   return (
-    <header class={styles.header}>
+    <header className={styles.header}>
       <div className={styles.header__text}>
         <h1 className={styles.header__about}>
           <span className={styles.header__about__intro}>
@@ -20,9 +20,9 @@ const Header = () => {
             Feel free to look at all the projects that I have worked on
           </span>
           <span className={styles.header__about__avaliability}>
-            Remotely available UTC-1 to UTC+8 and connect at{' '}
+            Remotely available UTC-1 to UTC+8 and connect at
             <span className={styles.header__about__name}>
-              kenolusola@gmail.com
+            &nbsp;kenolusola@gmail.com
             </span>
           </span>
         </h1>
