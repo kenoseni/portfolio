@@ -1,0 +1,79 @@
+@import 'abstracts/variables';
+.card {
+  //   perspective: 2rem;
+  height: 50rem;
+  width: 36rem;
+  position: relative;
+  &__side {
+    height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+    border-radius: 3px;
+  }
+
+  &__picture {
+    
+    background-size: cover;
+    background-blend-mode: screen;
+    height: 23rem;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &__heading {
+    font-size: 2.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+
+    color: $color-white;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 75%;
+
+    span {
+      padding: 0.5rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+
+    //   background-image: linear-gradient(
+    //     to right bottom,
+    //     rgba($color-secondary-light, 0.85),
+    //     rgba($color-secondary-dark, 0.85)
+    //   );
+    }
+  }
+
+  &__details {
+    padding: 2rem;
+
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.1rem solid $color-home-dark;
+        }
+      }
+    }
+  }
+
+  &__back {
+    &__1 {
+    }
+  }
+}
