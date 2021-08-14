@@ -1,11 +1,13 @@
 @import 'abstracts/variables';
 .card {
-  //   perspective: 2rem;
-  height: 50rem;
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  height: 54rem;
   width: 36rem;
   position: relative;
+
   &__side {
-    height: 50rem;
+    height: 54rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -13,10 +15,33 @@
     backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     border-radius: 3px;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    &--front {
+      background-color: $color-white;
+    }
+
+    &__back {
+      transform: rotateY(180deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+      color: $color-white;
+      font-weight: 100;
+    }
+  }
+
+  &:hover &__side__front {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &__side__back {
+    transform: rotateY(0);
   }
 
   &__picture {
-    
     background-size: cover;
     background-blend-mode: screen;
     height: 23rem;
@@ -24,7 +49,7 @@
     border-bottom-right-radius: 3px;
 
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 
   &__heading {
@@ -43,12 +68,6 @@
       padding: 0.5rem 1.5rem;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
-
-    //   background-image: linear-gradient(
-    //     to right bottom,
-    //     rgba($color-secondary-light, 0.85),
-    //     rgba($color-secondary-dark, 0.85)
-    //   );
     }
   }
 
@@ -66,14 +85,9 @@
         padding: 1rem;
 
         &:not(:last-child) {
-          border-bottom: 0.1rem solid $color-home-dark;
+          border-bottom: 0.1rem dotted $color-home-dark;
         }
       }
-    }
-  }
-
-  &__back {
-    &__1 {
     }
   }
 }

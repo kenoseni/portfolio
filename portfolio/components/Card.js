@@ -11,15 +11,15 @@ const Card = ({
   image,
   color1,
   color2,
+  production,
 }) => {
-  console.log(color1);
   return (
     <div className={styles.card}>
-      <div className={styles.card__side}>
+      <div className={`${styles.card__side} ${styles.card__side__front}`}>
         <div
           className={styles.card__picture}
           style={{
-            backgroundImage: `linear-gradient(to right, ${color1}, ${color2}), url(${image.src})`,
+            backgroundImage: `url(${image.src})`,
           }}
         >
           &nbsp;
@@ -27,8 +27,7 @@ const Card = ({
         <h4 className={styles.card__heading}>
           <span
             style={{
-            color: `${color1}`,
-              backgroundImage: `linear-gradient(to right bottom, rgba(${color1}, 0.85), rgba(${color2}, 0.85)))`,
+              backgroundImage: `linear-gradient(to right bottom, ${color1}, ${color2})`,
             }}
           >
             {title}
@@ -40,11 +39,17 @@ const Card = ({
             <li>Frontend: {frontend}</li>
             <li>Backend: {backend}</li>
             <li>{database}</li>
-            <li>Staging Deployment: {deployment}</li>
+            <li>Deployment: {deployment}</li>
+            <li>Production Status: {production}</li>
           </ul>
         </div>
       </div>
-      <div className="card__side card__side__back card__side__back__1">
+      <div
+        className={`${styles.card__side} ${styles.card__side__back}`}
+        style={{
+          backgroundImage: `linear-gradient(to right bottom, ${color1}, ${color2})`,
+        }}
+      >
         <Link href="/projects">
           <a>View more</a>
         </Link>

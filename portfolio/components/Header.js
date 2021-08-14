@@ -22,7 +22,7 @@ const Header = () => {
           <span className={styles.header__about__avaliability}>
             Remotely available UTC-1 to UTC+8 and connect at
             <span className={styles.header__about__name}>
-            &nbsp;kenolusola@gmail.com
+              &nbsp;kenolusola@gmail.com
             </span>
           </span>
         </h1>
