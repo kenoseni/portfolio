@@ -20,7 +20,7 @@ const Header = () => {
             Feel free to look at all the projects that I have worked on
           </span>
           <span className={styles.header__about__avaliability}>
-            Remotely available UTC-1 to UTC+8 and connect at
+            Remotely available UTC-7 to UTC+1 and connect at
             <span className={styles.header__about__name}>
               &nbsp;kenolusola@gmail.com
             </span>

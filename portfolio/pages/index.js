@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import Projects from '../components/Projects';
@@ -32,7 +33,12 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        
+        <div className={styles.footer__social}>
+          <Footer />
+        </div>
+        <div className={styles.footer__name}>
+          Olusola Oseni &#169;2020 - {new Date().getFullYear()}{' '}
+        </div>
       </footer>
     </div>
   );

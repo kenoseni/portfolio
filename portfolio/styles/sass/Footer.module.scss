@@ -1,0 +1,9 @@
+@import 'abstracts/variables';
+
+.social {
+  font-size: 3rem;
+  padding: 1.5rem;
+  &:hover {
+    box-shadow: 0 1.5rem 2rem rgba($color-white, 0.35);
+  }
+}
