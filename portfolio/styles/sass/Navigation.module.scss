@@ -5,7 +5,7 @@
     display: none;
   }
 
-  &__button {
+  &__button, &__button__back {
     position: fixed;
     height: 6rem;
     width: 6rem;
@@ -21,11 +21,29 @@
     background-color: $color-white;
   }
 
-  &__icon {
+  &__icon, &__icon__back {
     font-size: 4rem;
     display: inline-block;
     margin-top: 1rem;
     color: $color-first-dark;
+  }
+
+  &__icon__back {
+    opacity: none;
+  }
+
+  &__checkbox:checked ~ &__button {
+    display: none;
+    opacity: 0;
+  }
+
+  &__checkbox:checked ~ &__button__back {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  &__checkbox:checked ~ &__icon__back {
+    opacity: 1;
   }
 
   &__background {

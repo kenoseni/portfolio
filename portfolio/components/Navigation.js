@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { IoMenuOutline } from 'react-icons/io5';
+import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
 import styles from '../styles/sass/Navigation.module.scss';
 const Navigation = () => {
   return (
@@ -9,6 +9,11 @@ const Navigation = () => {
         type="checkbox"
         className={styles.navigation__checkbox}
       />
+      <label htmlFor="navi-toggle" className={styles.navigation__button__back}>
+        <span className={styles.navigation__icon__back}>
+          <IoCloseOutline />
+        </span>
+      </label>
       <label htmlFor="navi-toggle" className={styles.navigation__button}>
         <span className={styles.navigation__icon}>
           <IoMenuOutline />
@@ -32,7 +37,7 @@ const Navigation = () => {
             </Link>
           </li>
           <li className={styles.navigation__item}>
-            <a href="#" target="_blank" className={styles.navigation__link}>
+            <a href="/blog" className={styles.navigation__link}>
               <span>Blog</span>
             </a>
           </li>
