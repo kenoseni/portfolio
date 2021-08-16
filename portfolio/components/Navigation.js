@@ -23,13 +23,6 @@ const Navigation = () => {
       <nav className={styles.navigation__nav}>
         <ul className={styles.navigation__list}>
           <li className={styles.navigation__item}>
-            <Link href="/">
-              <a className={styles.navigation__link}>
-                <span>Home</span>
-              </a>
-            </Link>
-          </li>
-          <li className={styles.navigation__item}>
             <Link href="/projects">
               <a className={styles.navigation__link}>
                 <span>Projects</span>
