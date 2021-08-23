@@ -1,4 +1,5 @@
 @import 'abstracts/variables';
+@import './base/mixins';
 
 .notfound {
   display: flex;
@@ -8,4 +9,10 @@
   font-size: 3rem;
   background-color: $color-offwhite;
   height: 100vh;
+  text-align: center;
+
+  @include responsive(tab-port) {
+    font-size: 2rem;
+  }
+
 }
